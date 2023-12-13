@@ -99,6 +99,7 @@ body {
 .box-4 {
   display: grid;
   gap: 5px;
+  grid-auto-flow: column;
 
   text-align: center;
   background-color: lightgreen;
@@ -179,19 +180,18 @@ body {
   /* display: -ms-inline-grid; */
   display: grid;
 
-  grid-template-columns: 50px 1fr repeat(3,auto) 1.3fr;
+  grid-template-columns: 50px 1fr repeat(3, auto) 1.3fr;
 
   grid-template-areas:
     ".... m8 m8 ."
     ". m4 m4 ."
-    ". m4 m4 ."
-    ;
-    gap: 5px;
+    ". m4 m4 .";
+  gap: 5px;
 
-    text-align: center;
+  text-align: center;
   margin: 50px;
   background-color: beige;
-  color:blue;
+  color: blue;
   font-weight: bolder;
 }
 
@@ -200,10 +200,9 @@ body {
   color: #333;
 }
 .box-9 > em {
-  font-style:  italic ;
-  text-decoration:dotted  underline;
+  font-style: italic;
+  text-decoration: dotted underline;
 }
-
 
 .m94 {
   grid-area: m4;
@@ -216,8 +215,46 @@ body {
   grid-area: m8;
 }
 
+.box-10 {
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  grid-template-rows: repeat(4, 200px);
+  gap: 10px;
+  border: 1px solid red;
 
+  position: relative;
+}
 
+.ch10 {
+  background-color: bisque;
+}
 
+div.ch10 {
+  width: 100px;
+  height: 100px;
+}
+h1.ch10 {
+  /* font-size: 50px; */
 
+  /* height: 60px; */
+  /* margin-inline: auto; */
 
+  position: relative;
+  /* left: 30px; */
+}
+.m102 {
+  display: inline;
+}
+
+.m103 {
+  position: relative;
+  top: 10px;
+  right: -30px;
+}
+.bare {
+  /* margin-inline: auto; */
+  text-align: center;
+  display: inline;
+  margin-inline: 20px;
+  background-color: aquamarine;
+}
